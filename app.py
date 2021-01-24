@@ -13,10 +13,10 @@ CORS(app, resources={r"/*": {"origins": "*"}})
 app.config['CORS_HEADERS'] = 'Content-Type'
 
 
-@app.route('/post/<comment>', methods=['GET'])
+@app.route('/post/', methods=['GET'])
 @cross_origin()
-def post_data(comment):
-    #comment = request.args.comment
+def post_data():
+    comment = request.body
     res = fake_predict(comment)
     print(comment, res)
     return {'prediction': res}
