@@ -13,7 +13,7 @@ CORS(app, resources={r"/*": {"origins": "*"}})
 app.config['CORS_HEADERS'] = 'Content-Type'
 
 
-@app.route('/post/', methods=['GET'])
+@app.route('/post/', methods=['POST'])
 @cross_origin()
 def post_data():
     comment = request.body
