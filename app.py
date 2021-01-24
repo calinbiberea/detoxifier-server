@@ -17,8 +17,8 @@ app.config['CORS_HEADERS'] = 'Content-Type'
 @cross_origin()
 def post_data():
     comment = request.args
+    print("Got comment ", comment)
     res = fake_predict(comment)
-    print(comment, res)
     return {'prediction': res}
 
 
