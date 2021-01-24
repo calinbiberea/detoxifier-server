@@ -5,7 +5,6 @@ from sklearn.feature_extraction.text import TfidfTransformer
 from sklearn.pipeline import Pipeline
 import numpy as np
 
-
 with open('RF.pkl', 'rb') as f:
     pipe = pkl.load(f)
 
